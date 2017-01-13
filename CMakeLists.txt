@@ -36,4 +36,7 @@ set(vlink_SRCS
 
 add_executable(vlink ${vlink_SRCS})
 set_property(TARGET vlink PROPERTY C_STANDARD 99)
-set_property(TARGET vlink PROPERTY APPEND_STRING PROPERTY COMPILE_FLAGS -fomit-frame-pointer)
+set_property(TARGET vlink PROPERTY APPEND_STRING PROPERTY COMPILE_FLAGS
+  "-fomit-frame-pointer -Wno-parentheses" 
+)
+
