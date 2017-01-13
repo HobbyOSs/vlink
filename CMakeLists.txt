@@ -31,6 +31,9 @@ set(vlink_SRCS
     t_ataritos.c  
     t_rawbin.c    
     t_rawseg.c    
-    t_vobj.c)
+    t_vobj.c
+    version.c)
 
 add_executable(vlink ${vlink_SRCS})
+set_property(TARGET vlink PROPERTY C_STANDARD 99)
+set_property(TARGET vlink PROPERTY APPEND_STRING PROPERTY COMPILE_FLAGS -fomit-frame-pointer)
